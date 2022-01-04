@@ -10,12 +10,12 @@ import {getResponseURL} from '@angular/http/src/http_utils';
 })
 export class ProductListComponent implements OnInit {
 
-  productList: Product[];
+  products: Product[];
 
   constructor(private _productService: ProductService) { }
 
   ngOnInit() {
-    this._productService.getProducts().subscribe(response  => this.productList = response)
+    this._productService.getProducts().subscribe(response  => this.products = response)
   }
 
 }
